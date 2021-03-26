@@ -18,9 +18,7 @@ class HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     updateListView();
-    if (itemList == null) {
-      itemList = List<Item>();
-    }
+    if (itemList == null) itemList = List<Item>();
     return Scaffold(
       appBar: AppBar(
         title: Text(
@@ -37,7 +35,11 @@ class HomeState extends State<Home> {
           child: SizedBox(
             width: double.infinity,
             child: RaisedButton(
-              child: Text("Tambah Item"),
+              child: Text(
+                "Tambah Item",
+                style: TextStyle(color: Colors.white),
+              ),
+              color: const Color(0xff252c48),
               onPressed: () async {
                 var item = await navigateToEntryForm(context, null);
                 if (item != null) {

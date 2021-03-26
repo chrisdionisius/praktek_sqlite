@@ -29,7 +29,7 @@ class EntryFormState extends State<EntryForm> {
     return Scaffold(
         appBar: AppBar(
           title: item == null
-              ? Text('Tambah')
+              ? Text('Tambah', style: TextStyle(color: Colors.white))
               : Text('Ubah', style: TextStyle(color: Colors.white)),
           leading: BackButton(
             color: Colors.white,
